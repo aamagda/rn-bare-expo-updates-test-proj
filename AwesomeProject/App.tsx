@@ -4,6 +4,7 @@
  *
  * @format
  */
+import * as Updates from 'expo-updates';
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -76,6 +77,11 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Section title="Expo-Updates-Data">
+            <Text>checkAutomatically: {Updates.checkAutomatically}; </Text>
+            <Text>updateId: {Updates.updateId}; </Text>
+            <Text>channel: {Updates.channel}; </Text>
+          </Section>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
